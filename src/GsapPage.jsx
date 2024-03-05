@@ -32,7 +32,6 @@ const GsapPage = () => {
             stagger: 1,
             // y: '0%',
             clipPath: 'inset(0% 0% 0%)',
-            scale: 1,
             snap: true,
         })
 
