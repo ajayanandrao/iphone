@@ -351,6 +351,9 @@ const Drill = () => {
 
                     </div>
                 </div>
+
+
+                <div className="footer">© 2024 Copyright: iphone13Pro.com</div>
             </div>
 
             
