@@ -1,0 +1,69 @@
+@import "./../Styles//Mixin_New.scss";
+
+.SecOne-Container {
+    padding: 1rem;
+    // background: red;
+    width: 100vw;
+    height: 100vh;
+    // border-bottom: 1px solid white;
+    display: flex;
+    align-items: center;
+
+    .calOne {
+        width: 100%;
+        max-width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        @include respond-to(xs){
+            max-width: 100%;
+            justify-content: center;
+            margin: 0 auto;
+            position: absolute;
+            left: 0;
+            z-index: 1;
+            // background: red;
+        }
+        // background: red;
+        .title-div {
+            width: 100%;
+            padding-bottom: 50px;
+
+            .title {
+                font-size: 60px;
+                text-align: center;
+            }
+
+            .subtitle {
+                text-align: center;
+                font-size: 20px;
+                margin-top: 50px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                .buy-btn {
+                    display: inline-flex;
+                    padding: 10px 20px;
+                    background-color: #0071e3;
+                    margin-top: 20px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    border-radius: 30px;
+                    box-shadow: #0071e39c 0px 5px 15px;
+                    cursor: pointer;
+                }
+            }
+
+        }
+    }
+
+    .calTwo {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+
+    }
+}

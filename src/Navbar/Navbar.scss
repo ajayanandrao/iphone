@@ -1,0 +1,116 @@
+@import "./../Styles/Mixin_New.scss";
+
+.nav-container {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.418);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    // justify-content: center;
+
+    .container {
+        width: 100%;
+        max-width: 850px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include respond-to(md) {
+            max-width: none;
+            justify-content: start;
+        }
+
+        @include respond-to(sm) {
+            max-width: none;
+            justify-content: start;
+        }
+
+        @include respond-to(xs) {
+            max-width: none;
+            justify-content: start;
+        }
+
+
+        .nav-brand-icon {
+            font-size: 24px;
+            color: #d2d2d2;
+        }
+
+        .nav-items {
+            color: #d2d2d2;
+
+            @include respond-to(md) {
+                display: none;
+            }
+
+            @include respond-to(sm) {
+                display: none;
+            }
+
+            @include respond-to(xs) {
+                display: none;
+            }
+        }
+
+        .nav-items-icon-div {
+            display: flex;
+            align-items: center;
+            width: 60px;
+            justify-content: space-between;
+
+            .menu {
+                display: none;
+
+                @include respond-to(md) {
+                    display: block;
+                }
+
+                @include respond-to(sm) {
+                    display: block;
+                }
+
+                @include respond-to(xs) {
+                    display: block;
+                }
+            }
+
+            @include respond-to (md) {
+                width: 100%;
+                padding: 0 1rem;
+                justify-content: flex-end;
+            }
+
+            @include respond-to (sm) {
+                width: 100%;
+                padding: 0 1rem;
+                justify-content: flex-end;
+            }
+
+            @include respond-to (xs) {
+                width: 100%;
+                padding: 0 1rem;
+                justify-content: flex-end;
+            }
+
+            .nav-items-icon {
+                font-size: 18px;
+                margin-top: 3px;
+
+                @include respond-to(md) {
+                    margin-left: 25px;
+                }
+
+                @include respond-to(sm) {
+                    margin-left: 25px;
+                }
+
+                @include respond-to(xs) {
+                    margin-left: 25px;
+                }
+            }
+        }
+
+    }
+}

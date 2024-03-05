@@ -1,0 +1,58 @@
+@import "./../Styles//Mixin_New.scss";
+
+.SecTwo-container {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    padding-top: 100px;
+
+    .title-div {
+        .title {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            font-size: 60px;
+            font-weight: 600;
+        }
+
+        .titleSub {
+            font-size: 28px;
+            width: 100%;
+            max-width: 1000px;
+            margin: 5px auto;
+            font-weight: 600;
+            color: gray;
+            text-align: start;
+        }
+    }
+
+    .secTwo-colRight-div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        .secTwo-colRight {
+            width: 50%;
+            height: 100%;
+
+            @include respond-to(xs) {
+                width: 100%;
+            }
+
+            .secTwo-colRight-img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                object-position: center;
+                margin-top: 50px;
+
+                @include respond-to(xs) {
+                    // width: 100%;
+                    width: 600px;
+                }
+    
+            }
+        }
+    }
+}

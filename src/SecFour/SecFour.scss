@@ -1,0 +1,251 @@
+@import "./../Styles/Mixin_New.scss";
+
+.secFour-container {
+    width: 100%;
+    height: auto;
+    background: black;
+    position: relative;
+    z-index: 1;
+    color: white;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    padding: 1rem;
+
+    .title-div {
+        width: 100%;
+
+        max-width: 800px;
+        margin: 0 auto;
+
+        .title {
+            width: 100%;
+            max-width: 400px;
+            font-size: 60px;
+            font-weight: 600;
+        }
+    }
+
+    .secFour-img-div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+
+        .secFour-img {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    }
+
+    .secFour-desc-div {
+        width: 100%;
+        max-width: 1000px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        // background: red;
+        margin-top: 50px;
+
+        .secFour-colOne {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+
+            @include respond-to(sm) {
+                flex-direction: column;
+                align-items: center;
+            }
+            @include respond-to(xs) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .secFour-colOne-one {
+                padding: 1rem;
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 50px;
+                font-size: 22px;
+                font-weight: bold;
+                color: gray;
+                line-height: 30px;
+                opacity: 0;
+                transform: translateY(200px);
+
+                @include respond-to(xs) {
+                    max-width: 500px;
+                    margin-bottom: 10px;
+                    transform: translateY(0px);
+                    opacity: 0;
+                }
+                @include respond-to(sm) {
+                    max-width: 500px;
+                    margin-bottom: 10px;
+                    transform: translateY(0px);
+                    opacity: 0;
+                }
+                @include respond-to(md) {
+                    max-width: 500px;
+                    margin-bottom: 10px;
+                    transform: translateY(0px);
+                    opacity: 0;
+                }
+            }
+
+            .secFour-colOne-two {
+                padding: 1rem;
+                width: 100%;
+                max-width: 400px;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+                font-size: 22px;
+                font-weight: bold;
+                color: gray;
+                line-height: 30px;
+                opacity: 0;
+                transform: translateY(200px);
+
+                @include respond-to(xs) {
+                    margin-bottom: 10px;
+                    max-width: 500px;
+                    transform: translateY(0px);
+                    opacity: 0;
+                }
+                @include respond-to(sm) {
+                    margin-bottom: 10px;
+                    max-width: 500px;
+                    transform: translateY(0px);
+                    opacity: 0;
+                }
+                @include respond-to(md) {
+                    margin-bottom: 10px;
+                    max-width: 500px;
+                    transform: translateY(0px);
+                    opacity: 0;
+                }
+            }
+        }
+
+        .secFour-colTwo {
+
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            // background: red;
+
+            @include respond-to(xs) {
+                display: none;
+            }
+            @include respond-to(sm) {
+                display: none;
+            }
+
+            .secFour-colTwo-one {
+                padding: 1rem;
+                width: 100%;
+                max-width: 400px;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 50px;
+                font-size: 22px;
+                font-weight: bold;
+                color: gray;
+                line-height: 30px;
+                opacity: 0;
+                transform: translateY(200px);
+
+                @include respond-to(xs){
+                    opacity: 0;
+                    transform: translateY(0px);
+                }
+                @include respond-to(sm){
+                    opacity: 0;
+                    transform: translateY(0px);
+                }
+                @include respond-to(md){
+                    opacity: 0;
+                    transform: translateY(0px);
+                }
+            }
+
+            .secFour-colTwo-two {
+                padding: 1rem;
+                width: 100%;
+                max-width: 400px;
+                margin-bottom: 50px;
+                font-size: 22px;
+                font-weight: bold;
+                color: gray;
+                line-height: 30px;
+                opacity: 0;
+                transform: translateY(200px);
+                @include respond-to(md){
+                    transform: translateY(00px);
+                    opacity: 0;
+                }
+                @include respond-to(sm){
+                    opacity: 0;
+                    transform: translateY(0px);
+                }
+                @include respond-to(xs){
+                    opacity: 0;
+                    transform: translateY(00px);
+                }
+            }
+        }
+    }
+}
+
+
+// SecFive
+
+body {
+    width: 100%;
+    height: 300vh;
+}
+
+.secFive-contaier {
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: white;
+    position: relative;
+    z-index: 1;
+
+    .comparisonImage {
+        width: 100%;
+        height: 100vh;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // background: red;
+
+        img {
+            width: 100%;
+            height: 80%;
+            object-fit: contain;
+            position: absolute;
+        }
+    }
+
+
+    .afterImage {
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        transform: translate(100%, 0px);
+    }
+
+    .afterImage img {
+        transform: translate(-100%, 0px);
+    }
+
+
+}
+
+// ===========
