@@ -34,7 +34,7 @@ import SecTwo from './SecTwo/SecTwo';
 import SecThree from './SecThree/SecThree';
 import SecFour from './SecFour/SecFour';
 import GsapPage from './GsapPage';
-
+import { IoLogoApple } from "react-icons/io5";
 
 const Drill = () => {
     const canvasRef = useRef(null);
@@ -65,6 +65,9 @@ const Drill = () => {
 
     async function setupViewer() {
 
+        const loader = document.querySelector('.loader');
+        loader.style.display = 'flex';
+
         // Initialize the viewer
         const viewer = new ViewerApp({
             // canvas: document.getElementById('webgi-canvas'),
@@ -76,6 +79,8 @@ const Drill = () => {
         const camera = viewer.scene.activeCamera;
         const position = camera.position;
         const target = camera.target;
+
+
 
         await viewer.addPlugin(GBufferPlugin);
         await viewer.addPlugin(new ProgressivePlugin(32));
@@ -90,7 +95,7 @@ const Drill = () => {
         const importer = manager.importer;
         importer.addEventListener("onLoad", (ev) => {
             gsap.to('.loader', {
-                x: '100%', duration: 1.5, ease: 'power4.inOut', delay: 0.5, onComplete: () => {
+                y: '-100%', duration: 1.5, ease: 'power4.inOut', delay: 0.5, onComplete: () => {
                     document.body.style.overflowY = 'auto';
                     lenis.start();
 
@@ -285,7 +290,15 @@ const Drill = () => {
 
     return (
         <>
-
+            <div className="loader">
+                <div className="loading-div">
+                    <IoLogoApple className='alogo' />
+                    <div className="alogodiv">
+                        <IoLogoApple className='alogo2' />
+                    </div>
+                </div>
+                Please Wait
+            </div>
             <section class=" one">
                 <SecOne />
             </section>
@@ -356,7 +369,7 @@ const Drill = () => {
                 <div className="footer">© 2024 Copyright: iphone13Pro.com</div>
             </div>
 
-            
+
 
             <div id="webgi-canvas-container">
                 <canvas id="webgi-canvas" ref={canvasRef}></canvas>
