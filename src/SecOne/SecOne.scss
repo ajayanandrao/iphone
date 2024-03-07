@@ -9,6 +9,11 @@
     display: flex;
     align-items: center;
 
+
+    @include respond-to(xs) {
+        padding-top: 10px;
+    }
+
     .calOne {
         width: 100%;
         max-width: 50%;
@@ -16,7 +21,9 @@
         display: flex;
         align-items: center;
 
-        @include respond-to(xs){
+        @include respond-to(xs) {
+            align-items: start;
+
             max-width: 100%;
             justify-content: center;
             margin: 0 auto;
@@ -25,14 +32,20 @@
             z-index: 1;
             // background: red;
         }
+
         // background: red;
         .title-div {
             width: 100%;
             padding-bottom: 50px;
+            padding: 1rem;
 
             .title {
                 font-size: 60px;
                 text-align: center;
+
+                @include respond-to(xs) {
+                    font-size: 45px;
+                }
             }
 
             .subtitle {
@@ -44,6 +57,10 @@
                 align-items: center;
                 justify-content: center;
 
+                @include respond-to(xs) {
+                    margin-top: 20px;
+                }
+
                 .buy-btn {
                     display: inline-flex;
                     padding: 10px 20px;
@@ -54,6 +71,12 @@
                     border-radius: 30px;
                     box-shadow: #0071e39c 0px 5px 15px;
                     cursor: pointer;
+                    position: relative;
+                    z-index: 1;
+
+                    @include respond-to(xs) {
+                        margin-top: 20px;
+                    }
                 }
             }
 
@@ -69,11 +92,79 @@
 }
 
 
-.footer{
+.footer {
     width: 100%;
     height: 50px;
     margin-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+
+.loader {
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    /* border-bottom: 2px solid white; */
+
+    .loading-div {
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .alogo {
+            font-size: 65px;
+            color: white;
+            position: absolute;
+            animation: appleAnimation 2s linear infinite;
+            animation-duration: 1s;
+            animation-name: appleAnimation;
+            transition: 1s ease-in-out;
+            opacity: 0;
+
+        }
+
+        .alogodiv {
+            width: 150px;
+            height: 150px;
+            backdrop-filter: blur(15px);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .alogo2 {
+                font-size: 60px;
+                color: white;
+            }
+        }
+    }
+
+}
+
+@keyframes appleAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+    }
 }

@@ -1,15 +1,15 @@
 
 import "./App.scss";
-import Drill from "./Drill";
 import Navbar from "./Navbar/Navbar";
+import Object from "./Object";
 
 function App() {
 
   return (
-    <>
+    <div style={{ overflow: "hidden" }}>
       <Navbar />
-      <Drill />
-    </>
+      <Object />
+    </div>
   );
 }
 
